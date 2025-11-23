@@ -1,8 +1,0 @@
-1. Déposez vos logos (images .png ou .svg) dans ce dossier.
-2. Assurez-vous qu'ils ont un fond transparent pour un meilleur rendu.
-3. Allez dans le fichier components/TrustedBy.tsx
-4. Remplacez les liens "https://placehold.co..." par le chemin de vos images.
-
-Exemple :
-Si vous déposez une image nommée "golf-club.png" ici, 
-écrivez : src: "/logos/golf-club.png" dans le code.
