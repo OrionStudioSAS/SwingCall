@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+            { threshold: 0.9 }
     );
 
     if (footerRef.current) {
@@ -124,8 +124,27 @@ export const Footer: React.FC = () => {
                 </div>
             </div>
 
-            {/* BOTTOM: BIG TYPOGRAPHY */}
-            <div className="border-t border-white/10 pt-8 relative">
+                        {/* LOGO WITH HORIZONTAL MASK AND REVEAL */}
+                        <div className="w-full flex justify-center mb-8 relative">
+                                <div className="w-full max-w-xl h-24 overflow-hidden relative">
+                                        <div className="absolute inset-x-0 top-1/2 h-px bg-white/20 z-20" />
+                                        <img
+                                            src="/logos/Logo Swing Call.png"
+                                            alt="Swing Call"
+                                            style={{
+                                                position: 'absolute',
+                                                left: '50%',
+                                                top: '50%',
+                                                transform: isVisible ? 'translate(-50%, -30%)' : 'translate(-50%, 30%)',
+                                                transition: 'transform 700ms cubic-bezier(.2,.8,.2,1)'
+                                            }}
+                                            className="w-auto h-32 object-contain z-10 pointer-events-none select-none"
+                                        />
+                                </div>
+                        </div>
+
+                        {/* BOTTOM: BIG TYPOGRAPHY */}
+                        <div className="border-t border-white/10 pt-8 relative">
                 <div className="flex flex-col md:flex-row justify-between items-center text-xs text-white/30 uppercase tracking-widest mb-12 gap-4">
                     <span>© 2025 Swing Call AI.</span>
                     <span className="hidden md:block">Paris • Lyon • Bordeaux</span>
