@@ -57,11 +57,11 @@ export const Features: React.FC = () => {
 
                      {/* Partner Logos Stack */}
                      <div className="flex flex-col gap-2">
-                        <div className="w-14 h-14 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center text-[10px] font-bold text-blue-600 shadow-sm">
-                            NG
+                        <div className="w-14 h-14 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center shadow-sm overflow-hidden">
+                            <img src="/logos/netgolf_logo.jpeg" alt="NetGolf" className="w-full h-full object-contain" />
                         </div>
-                        <div className="w-14 h-14 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center text-[10px] font-bold text-green-600 leading-none text-center shadow-sm">
-                            Prima<br/>Golf
+                        <div className="w-14 h-14 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center shadow-sm overflow-hidden">
+                            <img src="/logos/primagolf.webp" alt="Prima Golf" className="w-full h-full object-contain" />
                         </div>
                      </div>
                 </div>
