@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
                     
                     {/* Title */}
                     <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-[1.1] mb-8 tracking-tight drop-shadow-2xl max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
-                        Donnez à votre golf test un assistant intelligent capable de gérer les appels comme un humain.
+                        Donnez à votre golf un assistant intelligent capable de gérer les appels comme un humain.
                     </h1>
                     
                     {/* Subtitle & CTA */}
