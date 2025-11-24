@@ -41,7 +41,7 @@ export const Hero: React.FC = () => {
   ];
 
   return (
-    <section className="relative bg-white px-4 md:px-6 pb-6 h-screen min-h-[850px] flex flex-col" style={{paddingTop: 'calc(var(--navbar-height, 96px) + 24px)'}}>
+    <section className="relative bg-white pt-24 px-4 md:px-6 pb-6 h-screen min-h-[850px] flex flex-col">
         {/* --- HERO BOX --- */}
         <div className="flex-1 bg-navy rounded-[32px] relative overflow-hidden flex flex-col w-full shadow-2xl isolate ring-1 ring-black/5">
             
