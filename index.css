@@ -1,0 +1,15 @@
+/* Custom overrides for non-Tailwind breakpoint behavior */
+
+/* Ensure apex CTA is hidden by default (Tailwind 'hidden' may set display:none) */
+.apex-cta {
+  display: none !important;
+}
+
+/* Show Apex CTA at >=1500px */
+@media (min-width: 1500px) {
+  .apex-cta {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}

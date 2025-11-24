@@ -115,10 +115,10 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center gap-4">
             {/* Apex App Button - Desktop */}
             <a 
-                href="https://apexswing.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hidden xl:flex items-center gap-3 px-4 py-2 rounded-lg bg-white border border-gray-200 text-navy text-sm font-bold hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 shadow-sm group/apex"
+              href="https://apexswing.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hidden apex-cta items-center gap-3 px-4 py-2 rounded-lg bg-white border border-gray-200 text-navy text-sm font-bold hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 shadow-sm group/apex"
             >
                 <div className="w-5 h-5 flex items-center justify-center">
                      <img 
