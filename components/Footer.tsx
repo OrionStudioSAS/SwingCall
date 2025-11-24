@@ -138,10 +138,7 @@ export const Footer: React.FC = () => {
                     </div>
                 </div>
                 
-                {/* Big Reveal Text */}
-                <h1 className="text-[16vw] leading-[0.8] font-bold font-display text-center md:text-left tracking-tighter text-white mix-blend-overlay select-none pointer-events-none opacity-10">
-                    SWING CALL
-                </h1>
+                {/* Big Reveal Text removed to avoid multiple H1s on the page */}
             </div>
 
         </div>
