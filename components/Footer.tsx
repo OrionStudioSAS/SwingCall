@@ -128,18 +128,19 @@ export const Footer: React.FC = () => {
                         <div className="w-full flex justify-center mb-8 relative">
                                 <div className="w-full max-w-xl h-24 overflow-hidden relative">
                                         <div className="absolute inset-x-0 top-1/2 h-px bg-white/20 z-20" />
-                                        <img
-                                            src="/logos/Logo Swing Call.png"
-                                            alt="Swing Call"
-                                            style={{
-                                                position: 'absolute',
-                                                left: '50%',
-                                                top: '50%',
-                                                transform: isVisible ? 'translate(-50%, -30%)' : 'translate(-50%, 30%)',
-                                                transition: 'transform 700ms cubic-bezier(.2,.8,.2,1)'
-                                            }}
-                                            className="w-auto h-32 object-contain z-10 pointer-events-none select-none"
-                                        />
+                                                <img
+                                                    src="/logos/Logo%20Swing%20Call.png"
+                                                    alt="Swing Call"
+                                                    style={{
+                                                        position: 'absolute',
+                                                        left: '50%',
+                                                        top: '50%',
+                                                        transform: isVisible ? 'translate(-50%, -10%)' : 'translate(-50%, 40%)',
+                                                        transition: 'transform 700ms cubic-bezier(.2,.8,.2,1)',
+                                                        filter: 'brightness(0) invert(1)'
+                                                    }}
+                                                    className="w-auto h-36 object-contain z-30 pointer-events-none select-none"
+                                                />
                                 </div>
                         </div>
 
