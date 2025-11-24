@@ -13,6 +13,7 @@ const navItems: NavItem[] = [
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navRef = React.useRef<HTMLElement | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
@@ -43,6 +44,23 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // expose navbar height as CSS variable so other components can add top margin when nav wraps to 2 lines
+  useEffect(() => {
+    const updateNavHeight = () => {
+      const h = navRef.current ? navRef.current.offsetHeight : 0;
+      document.documentElement.style.setProperty('--navbar-height', `${h}px`);
+    };
+
+    updateNavHeight();
+    window.addEventListener('resize', updateNavHeight);
+    // also update after fonts/images load
+    window.addEventListener('load', updateNavHeight);
+    return () => {
+      window.removeEventListener('resize', updateNavHeight);
+      window.removeEventListener('load', updateNavHeight);
+    };
+  }, []);
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
@@ -63,7 +81,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass-nav py-3' : 'bg-transparent py-6'}`}>
+    <nav ref={navRef} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? 'py-3 shadow' : 'py-6'}`}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo Section */}
         <div 
@@ -93,14 +111,14 @@ export const Navbar: React.FC = () => {
             </div>
         </div>
 
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-1 px-2 py-1.5 rounded-full bg-white/50 backdrop-blur-sm border border-taupe/10">
+        {/* Desktop Nav: flex with wrap. Links keep whitespace-nowrap; items (buttons) wrap as needed */}
+        <div className="hidden lg:flex flex-1 items-center justify-start flex-wrap gap-2 px-2 py-1.5 rounded-full bg-white/50 backdrop-blur-sm border border-taupe/10">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
               onClick={(e) => scrollToSection(e, item.href)}
-              className={`px-5 py-2 text-sm font-medium rounded-full transition-all font-sans ${
+              className={`inline-flex flex-none items-center px-4 py-2 text-sm font-medium rounded-full transition-all font-sans max-w-max whitespace-nowrap ${
                   activeSection === item.href 
                   ? 'bg-navy text-white shadow-md' 
                   : 'text-taupe hover:text-navy hover:bg-taupe/5'
@@ -127,7 +145,7 @@ export const Navbar: React.FC = () => {
                        className="w-full h-full object-contain" 
                      />
                 </div>
-                Apex Swing - Une app unifiée
+                <span className="whitespace-nowrap">Apex Swing - Une app unifiée</span>
             </a>
 
             <div className="hidden md:flex items-center gap-4">
