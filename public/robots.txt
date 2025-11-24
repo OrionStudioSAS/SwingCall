@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.swingcall.fr/sitemap.xml
+Host: www.swingcall.fr
