@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
         ref={footerRef}
         className="bg-navy text-white py-24 overflow-hidden relative border-t border-white/10"
     >
-        <div className={`container mx-auto px-4 transition-all duration-1000 ease-out transform mb-[-10rem] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+        <div className={`container mx-auto px-4 transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
             
             {/* TOP SECTION: CALL TO ACTION */}
             <div className="grid lg:grid-cols-2 gap-16 mb-32 border-b border-white/10 pb-16">
@@ -125,7 +125,7 @@ export const Footer: React.FC = () => {
             </div>
 
             {/* BOTTOM: BIG TYPOGRAPHY */}
-            <div className="border-t border-white/10 pt-20 relative">
+            <div className="border-t border-white/10 pt-8 relative">
                 <div className="flex flex-col md:flex-row justify-between items-center text-xs text-white/30 uppercase tracking-widest mb-12 gap-4">
                     <span>© 2025 Swing Call AI.</span>
                     <span className="hidden md:block">Paris • Lyon • Bordeaux</span>
@@ -139,15 +139,9 @@ export const Footer: React.FC = () => {
                 </div>
                 
                 {/* Big Reveal Text */}
-                <div className="relative overflow-hidden mt-10 lg:min-h-[60vh]">
-                    <div className="hidden lg:block absolute top-1/2 left-0 w-full h-[45vh] bg-navy z-10 pointer-events-none"></div>
-                    <div className="hidden lg:block absolute top-1/2 left-0 w-full h-[2px] bg-white/30 z-20"></div>
-                    <h1 
-                        className={`whitespace-nowrap text-[18vw] leading-[0.8] font-bold font-display text-center md:text-left tracking-tighter text-white select-none pointer-events-none transition-transform duration-[1600ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${isVisible ? 'lg:translate-y-[26%] translate-y-[10%]' : 'lg:translate-y-[75%] translate-y-[30%]'}`}
-                    >
-                        SWING CALL
-                    </h1>
-                </div>
+                <h1 className="text-[16vw] leading-[0.8] font-bold font-display text-center md:text-left tracking-tighter text-white mix-blend-overlay select-none pointer-events-none opacity-10">
+                    SWING CALL
+                </h1>
             </div>
 
         </div>
