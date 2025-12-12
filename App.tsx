@@ -20,7 +20,7 @@ function App() {
         <HowItWorks />
         <Benefits />
         <Features />
-        <Pricing />
+        {/* <Pricing /> */}
         <FAQ />
       </main>
       <Footer />

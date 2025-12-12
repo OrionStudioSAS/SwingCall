@@ -7,7 +7,6 @@ const navItems: NavItem[] = [
   { label: "Solutions", href: "#solutions" },
   { label: "Pourquoi ?", href: "#pourquoi" },
   { label: "Fonctionnalités", href: "#features" },
-  { label: "Tarifs", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ];
 
