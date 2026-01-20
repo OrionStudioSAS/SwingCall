@@ -80,15 +80,15 @@ export const Hero: React.FC = () => {
                         </p>
                        
                         {/* Luxury CTA Input */}
-                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-1.5 pl-6 flex items-center shadow-2xl w-auto group cursor-pointer hover:bg-white/10 transition-all duration-300">
+                        <a href="https://calendly.com/jbourlieu-apexswing/30min" target="_blank" rel="noopener noreferrer" className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-1.5 pl-6 flex items-center shadow-2xl w-auto group cursor-pointer hover:bg-white/10 transition-all duration-300">
                             <div className="flex flex-col text-left mr-8">
                                 <span className="text-white text-sm font-bold">Réserver une démo</span>
                                 <span className="text-white/40 text-[10px] font-medium">Sans engagement</span>
                             </div>
-                            <button className="w-10 h-10 bg-white text-navy rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-all duration-300">
+                            <div className="w-10 h-10 bg-white text-navy rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-all duration-300">
                                 <ArrowRight size={18} strokeWidth={2.5} />
-                            </button>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
 

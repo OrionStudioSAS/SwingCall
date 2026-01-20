@@ -41,10 +41,10 @@ export const Footer: React.FC = () => {
                         Rejoignez les golfs les plus innovants de France. Installation en 5 jours, sans interruption de service.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
-                         <button className="bg-white text-navy px-8 py-4 rounded-full font-bold text-sm hover:bg-gray-200 transition-colors flex items-center gap-2 group">
+                         <a href="https://calendly.com/jbourlieu-apexswing/30min" target="_blank" rel="noopener noreferrer" className="bg-white text-navy px-8 py-4 rounded-full font-bold text-sm hover:bg-gray-200 transition-colors flex items-center gap-2 group">
                             Réserver une démo
                             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform"/>
-                        </button>
+                        </a>
                         <button className="px-8 py-4 rounded-full font-bold text-sm border border-white/20 hover:bg-white/10 transition-colors text-white">
                             Voir les tarifs
                         </button>

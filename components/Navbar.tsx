@@ -131,10 +131,10 @@ export const Navbar: React.FC = () => {
 
             <div className="hidden md:flex items-center gap-4">
                 <a href="#" className="text-sm font-semibold text-navy hover:text-taupe transition-colors">S'identifier</a>
-                <button className="flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold bg-navy text-white hover:bg-black shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <a href="https://calendly.com/jbourlieu-apexswing/30min" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold bg-navy text-white hover:bg-black shadow-lg hover:shadow-xl transition-all duration-300 group">
                     Réserver une démo
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform"/>
-                </button>
+                </a>
             </div>
             <button 
                 className="lg:hidden p-2 text-navy"
@@ -176,10 +176,10 @@ export const Navbar: React.FC = () => {
             </a>
           ))}
           <a href="#" className="text-navy font-semibold block py-2">S'identifier</a>
-          <button className="w-full bg-navy text-white py-4 rounded-xl font-bold font-display hover:bg-black transition-colors flex items-center justify-center gap-2">
+          <a href="https://calendly.com/jbourlieu-apexswing/30min" target="_blank" rel="noopener noreferrer" className="w-full bg-navy text-white py-4 rounded-xl font-bold font-display hover:bg-black transition-colors flex items-center justify-center gap-2">
             Réserver une démo
             <ArrowRight size={18} />
-          </button>
+          </a>
         </div>
       )}
     </nav>
